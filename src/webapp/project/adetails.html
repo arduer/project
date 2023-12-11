@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">      
+<head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>藏品精粹</title>
+              <link rel="stylesheet" href="bootstrap/css/base.css">
+              <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+              <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            margin-bottom: 125px; /* 底部固定元素的高度，此处假设为60px */
+        }
+        .container{
+            position: relative;
+        }
+        img {
+            border: 0;
+        }
+        ul,li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #200b0b;
+        }
+        .navbar {
+            transition: top 0.5s ease;
+        }
+
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+        .navbar{
+            background-color: #91c5A9;
+        }
+        .navbar-collapse .hover:hover{
+            background-color: #91c5A9;
+            border-radius: 3px;
+        }
+        .navbar-collapse{
+            padding: 0;
+            margin: 0;
+        }
+        .bg-success{
+            background-color: #19692c!important;
+        }
+        .dropdown:hover .dropdown-menu{
+            display: block;
+        }
+        .carousel-item img{
+            height: 450px;
+        }
+        .main tr{
+            padding: 0;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .main td{
+            padding: 0;
+            /*text-align: center;*/
+            border-radius: 5px;
+        }
+        .main tr a{
+            display: block;
+            padding: 5px 10px;
+            margin: 0;
+            border-radius: 5px;
+        }
+        .main tr:hover{
+            transform: scale(1.1);
+            background-color: #00785a;
+            border-radius: 5px;
+            color: white;
+        }
+        .main tr:hover a{
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+        }
+        .card-grouper img{
+            width: 98%;
+            height: 200px;
+        }
+        .card-grouper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .card-grouper .card{
+            padding: 2px;
+            margin: 10px;
+            transition: transform 0.5s;
+        }
+        .card-grouper .card:hover{
+            transform: scale(1.1);
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        .admin:hover{
+            text-decoration-color: white!important;
+        }
+    </style>
+</head>
+<body>
+<!-- head start -->
+<div id="NavContent"></div>
+<script>
+    fetch('head.html')
+        .then(response => response.text())
+        .then(data => {
+            // 将获取的HTML内容插入到页面中
+            document.getElementById('NavContent').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+<div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <img width="100%" src="img/banner2.jpg" alt="静态大图">
+    </div>
+</div>
+<!-- head end -->
+<div class="clear"></div>
+<div class="W1200">
+              <div class="FL W360">
+                            <div class="left_title">
+                                      <h2>藏品精粹</h2> 
+                                      <p>
+                                          <span></span>
+                                      </p>   
+                            </div>
+                            <div class="sidemenu">
+                                <ul>
+                                    <li><a href="animal.html">动物藏品</a></li>
+                                    <li><a href="animal.html">植物藏品</a></li>
+                                    <li><a href="animal.html">化石藏品</a></li>
+                                    <li><a href="animal.html">木材藏品</a></li>
+                                    <li><a href="animal.html">文物藏品</a></li>
+                                    <li><a href="animal.html">昆虫藏品</a></li>
+                                    <li><a href="animal.html">土壤藏品</a></li>
+                                    <li><a href="animal.html">模型藏品</a></li>
+                                    <li><a href="animal.html">仿制品</a></li>
+                                    <li><a href="animal.html">工艺品</a></li>
+                                    <li><a href="animal.html">林下资源</a></li>
+                                    <li><a href="animal.html">林业器械</a></li>
+                                    <li><a href="animal.html">库存</a></li>
+                                </ul>
+                            </div>
+              </div>
+              <div class="FR W750">
+                            <div class="breadcrumb">
+                                          当前位置：<a href="index.html">网站首页</a>
+                                          &nbsp;&nbsp;/&nbsp;&nbsp;
+                                          <a href="cpjc.html">藏品精粹</a>
+                                          &nbsp;&nbsp;/&nbsp;&nbsp;
+                                          <a href="animal.html">动物藏品</a>
+                                          &nbsp;&nbsp;/&nbsp;&nbsp;
+                                          <a href="adetails.html">详细介绍</a>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="list_content">
+                                          <div class="title">
+                                                        <h3>绿头鸭简介</h3>
+                                                        <div class="c">
+                                                                      发布时间：2023-11-23&nbsp;&nbsp;点击：<span style="color: dimgray;">27530</span>
+                                                        </div>
+                                          </div>
+                                          <p>绿头鸭是雁形目鸭科鸭属鸟类，又名野鸭。体长约58厘米。雄鸟头绿色，有一白色领环，胸栗色，翼镜蓝绿色，尾上、下覆羽黑色，嘴黄绿色，脚橙红色；雌鸟嘴橙黄色，贯眼纹黑褐色，全体褐色，有暗褐色斑纹。<br>
+                                                        绿头鸭在世界各地均有分布。栖息于水生植物丰富的湖泊、河流、池塘、沼泽等水域中。喜结群活动，夏季结小群，秋季结大群南迁越冬，春末北迁。飞翔能力强；善于在水中游泳和戏水，擅长在水中觅食。食性广而杂，常以植物的种子、茎、叶和藻类、谷物以及小鱼小虾、甲壳类动物、昆虫等为食。公鸭约在150日龄性成熟，母鸭150-160日龄开始产卵。产卵期为3-5月，一般每窝产卵10枚左右，卵呈灰绿色或纯白色略带肉色，孵化期27-28天。人工饲养条件下有2-5月和8-12月两个产卵期。绿头鸭被列入中国《国家保护的有益的或者有重要经济、科学研究价值的陆生野生动物名录》
+                                          </p>
+                                          <div class="lvtouya c"><img src="img/lvtouya.jpg" alt="绿头鸭"></div>
+                            </div>
+
+              </div>
+<div class="clear"></div>
+</div>
+</body>
+<script>
+    fetch('head.html')
+        .then(response => response.text())
+        .then(data => {
+            // 将获取的HTML内容插入到页面中
+            document.getElementById('NavContent').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+</html>

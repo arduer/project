@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.context .row {
+    display: flex;
+    justify-content: space-between; /* 横向排列，项目之间平均分布 */
+    align-items: center; /* 在交叉轴上居中对齐 */
+}
+
+/* Card */
+.context .carder {
+    flex: 1;
+    width: 30%;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+/* Card header */
+.context .card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.context .card-header img{
+    width: 200px;
+    height: 300px;
+    position: center;
+}
+
+/* Card content */
+.context .card-content {
+    text-align: justify;
+}
+
+/* Card footer */
+.context .card-footer {
+    text-align: center;
+}
+
+/* Link button */
+.context .card-footer a {
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/* Hover styles */
+.context .carder:hover {
+    box-shadow: 0 0 10px #888;
+}
+
+.context .carder:hover .card-header {
+    opacity: 1;
+}
+
+/*.context .card-footer a:hover {*/
+/*    background-color: #f44336;*/
+/*}*/

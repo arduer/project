@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">      
+<head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>藏品精粹</title>
+              <link rel="stylesheet" href="bootstrap/css/base.css">
+              <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+              <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            margin-bottom: 125px; /* 底部固定元素的高度，此处假设为60px */
+        }
+        .container{
+            position: relative;
+        }
+        img {
+            border: 0;
+        }
+        ul,li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #200b0b;
+        }
+        .navbar {
+            transition: top 0.5s ease;
+        }
+
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+        .navbar{
+            background-color: #91c5A9;
+        }
+        .navbar-collapse .hover:hover{
+            background-color: #91c5A9;
+            border-radius: 3px;
+        }
+        .navbar-collapse{
+            padding: 0;
+            margin: 0;
+        }
+        .bg-success{
+            background-color: #19692c!important;
+        }
+        .dropdown:hover .dropdown-menu{
+            display: block;
+        }
+        .carousel-item img{
+            height: 450px;
+        }
+        .main tr{
+            padding: 0;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .main td{
+            padding: 0;
+            /*text-align: center;*/
+            border-radius: 5px;
+        }
+        .main tr a{
+            display: block;
+            padding: 5px 10px;
+            margin: 0;
+            border-radius: 5px;
+        }
+        .main tr:hover{
+            transform: scale(1.1);
+            background-color: #00785a;
+            border-radius: 5px;
+            color: white;
+        }
+        .main tr:hover a{
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+        }
+        .card-grouper img{
+            width: 98%;
+            height: 200px;
+        }
+        .card-grouper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .card-grouper .card{
+            padding: 2px;
+            margin: 10px;
+            transition: transform 0.5s;
+        }
+        .card-grouper .card:hover{
+            transform: scale(1.1);
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        .admin:hover{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="NavContent"></div>
+<script>
+    fetch('head.html')
+        .then(response => response.text())
+        .then(data => {
+            // 将获取的HTML内容插入到页面中
+            document.getElementById('NavContent').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+<div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <img width="100%" src="img/banner2.jpg" alt="静态大图">
+    </div>
+</div>
+<!-- head end -->
+<div class="clear"></div>
+<div class="W1200">
+              <div class="FL W360">
+                            <div class="left_title">
+                                      <h2>藏品精粹</h2> 
+                                      <p>
+                                          <span></span>
+                                      </p>   
+                            </div>
+                            <div class="sidemenu">
+                                <ul>
+                                    <li><a href="animal.html">动物藏品</a></li>
+                                    <li><a href="animal.html">植物藏品</a></li>
+                                    <li><a href="animal.html">化石藏品</a></li>
+                                    <li><a href="animal.html">木材藏品</a></li>
+                                    <li><a href="animal.html">文物藏品</a></li>
+                                    <li><a href="animal.html">昆虫藏品</a></li>
+                                    <li><a href="animal.html">土壤藏品</a></li>
+                                    <li><a href="animal.html">模型藏品</a></li>
+                                    <li><a href="animal.html">仿制品</a></li>
+                                    <li><a href="animal.html">工艺品</a></li>
+                                    <li><a href="animal.html">林下资源</a></li>
+                                    <li><a href="animal.html">林业器械</a></li>
+                                    <li><a href="animal.html">库存</a></li>
+                                </ul>
+                            </div>
+              </div>
+              <div class="FR W750">
+                <div class="breadcrumb">
+                    当前位置：<a href="index.html">网站首页</a>
+                    &nbsp;&nbsp;/&nbsp;&nbsp;
+                    <a href="cpjc.html">藏品精粹</a>
+                </div>
+                <div class="clear"></div>
+              <div class="list_content">
+                <div class="news">
+                    <ul>
+                        <li><a href="animal.html">兴安落叶松</a><span class="time">2023-01-19</span></li>
+                        <li><a href="animal.html">兴安落叶松</a><span class="time">2023-01-19</span></li>
+                        <li><a href="animal.html">春榆</a><span class="time">2023-01-19</span></li>
+                        <li><a href="animal.html">春榆</a><span class="time">2023-01-19</span></li>
+                        <li><a href="animal.html">小叶桢楠</a><span class="time">2023-01-19</span></li>
+                        <li><a href="animal.html">苏拉维西乌木</a><span class="time">2023-01-19</span></li>
+                        <li><a href="animal.html">苏拉维西乌木</a><span class="time">2023-01-19</span></li>
+                        <li><a href="animal.html">花枝</a><span class="time">2023-01-19</span></li>
+                        <li><a href="animal.html">鸡翅木</a><span class="time">2023-01-19</span></li>
+                        <li><a href="animal.html">微凹黄檀</a><span class="time">2023-01-19</span></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+              
+              
+</div>
+<div class="clear"></div>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>游客预约</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            margin-bottom: 125px; /* 底部固定元素的高度，此处假设为60px */
+        }
+        .container{
+            position: relative;
+        }
+        img {
+            border: 0;
+        }
+        ul,li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #200b0b;
+        }
+        .navbar {
+            transition: top 0.5s ease;
+        }
+
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+        .navbar{
+            background-color: #91c5A9;
+        }
+        .navbar-collapse .hover:hover{
+            background-color: #91c5A9;
+            border-radius: 3px;
+        }
+        .navbar-collapse{
+            padding: 0;
+            margin: 0;
+        }
+        .bg-success{
+            background-color: #19692c!important;
+        }
+        .dropdown:hover .dropdown-menu{
+            display: block;
+        }
+        .carousel-item img{
+            height: 450px;
+        }
+
+        .main{
+            position: static;
+            background: url("img/top3.png") repeat scroll;
+        }
+
+
+        .context {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+
+            width: 100%;
+            height: auto;
+        }
+        .bitian{
+            background-color: transparent;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div id="NavContent"></div>
+<script>
+    fetch('head.html')
+        .then(response => response.text())
+        .then(data => {
+            // 将获取的HTML内容插入到页面中
+            document.getElementById('NavContent').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+
+<div class="container main">
+
+    <div class="context">
+        <form onsubmit="return submitTest();" onreset="resetTest()" >
+            <div class="input-group mb-3">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" name="name" id="name">姓名：</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bitian" style="color: red;" >*必填</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">证件类型：</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option value="idCard">身份证</option>
+                    <option value="huZhao">护照</option>
+                </select>
+            </div>
+            证件号码：<input type="text" name="idNumber" id="idNumber">
+            <span style="color: red">*必填</span><br><br>
+            手机号码：<input type="tel" name="tel" id="tel">
+            <span style="color: red">*必填</span><br><br>
+            参观群体：
+            <select>
+                <option value="adult">成年人</option>
+                <option value="olds">老年人</option>
+                <option value="student">大学生</option>
+            </select><br><br>
+            参观日期：<input type="date" name="date"><br><br>
+            入馆时间：<input type="time" name="inTime"><br><br>
+            出馆时间：<input type="time" name="outTime"><br><br>
+            携带儿童：<input type="number" name="chNum">
+            <span style="color: red">每名成年人最多可以携带两名儿童</span><br><br>
+            国别:<input type="text" name="nation"><br><br>
+            是否校内人员：<label ><input type="radio"> 是</label> <label><input type="radio">否</label><br><br>
+            学工（教工）号：<input type="text" name="stuId">
+            <span style="color: red">仅本校人员填写</span><br><br>
+            <button type="submit" id="sub" class="btn btn-success">提交</button>
+            <button type="reset" id="re" class="btn btn-info">重置</button>
+
+        </form>
+
+    </div>
+</div>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var navbar = $(".navbar");
+        var stickyPoint = navbar.offset().top;
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() >= stickyPoint) {
+                navbar.addClass("sticky-top");
+            } else {
+                navbar.removeClass("sticky-top");
+            }
+        });
+
+    });
+    function submitTest(){
+
+        var tel = document.getElementsByName("tel").value;
+        var idNumber = document.getElementsByName("idNumber").value;
+        var name = document.getElementsByName("name").value;
+        if (idNumber== null) {
+            alert("证件号不能为空");
+        }
+        else if (tel == null) {
+            alert("电话号码不能为空");
+        }
+        else if (name == null) {
+            alert("姓名不能为空");
+        }
+       return false;
+    }
+    function resetTest(){
+        document.getElementsByName("input").value("");
+        alert("已清空");
+    }
+
+</script>
+</body>
+</html>

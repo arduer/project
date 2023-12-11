@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Head</title>
+</head>
+<body>
+<div class="header" style="height: 125px; background-image: url(img/top3.png);position: relative;">
+    <div class="container">
+        <a class="jk" href="#"><img src="img/logo11.png" alt="学院logo" style="padding-top: 25px;"></a>
+        <form action="">
+            <button class="btn btn-outline-success my-2 my-sm-0 admin" type="submit" style="color: #00785a;position: absolute;right: 60px;bottom: 60px;width: 100px;height: 40px;font-size: 17px">个人中心</button>
+        </form>
+        <a href="" style="position: absolute;right: 20px;bottom: 60px"><i class="material-icons" style="color: #00785a;font-size: 30px;">perm_identity</i></a>
+        <form action="">
+            <button class="btn btn-outline-success my-2 my-sm-0 admin" type="submit" style="color: #00785a;position: absolute;right: 60px;bottom: 8px;width: 100px;height: 40px;font-size: 17px">管理员</button>
+        </form>
+        <a href="" style="position: absolute;right: 20px;bottom: 8px"><i class="material-icons" style="color: #00785a;font-size: 30px;">perm_identity</i></a>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+    <div class="container">
+        <a class="navbar-brand hover" href="index" >首页</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item hover">
+                    <a class="nav-link" href="reserve.html">预约服务</a>
+                </li>
+                <li class="nav-item dropdown hover">
+                    <a class="nav-link dropdown-toggle" href="" >
+                        参观导览
+                    </a>
+                    <div class="dropdown-menu" style="margin: 0;opacity: 0.7">
+                        <a class="dropdown-item hover" href="cpjc.html">藏品精粹</a>
+                        <a class="dropdown-item hover" href="">数字化导览</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown hover">
+                    <a class="nav-link dropdown-toggle" href="" >
+                        资讯快览
+                    </a>
+                    <div class="dropdown-menu" style="margin: 0;opacity: 0.7">
+                        <a class="dropdown-item hover" href="forest.html">森博资讯</a>
+                        <a class="dropdown-item hover" href="">通知公告</a>
+                        <a class="dropdown-item hover" href="">志愿者文化</a>
+                    </div>
+                </li>
+                <li><a class="nav-link" href="" >
+                    反馈与评价
+                </a>
+                </li>
+
+                <li class="nav-item dropdown hover">
+                    <a class="nav-link dropdown-toggle" href="" >
+                        后台信息管理
+                    </a>
+                    <div class="dropdown-menu" style="margin: 0;opacity: 0.7">
+                        <a class="dropdown-item hover" href="">游客信息管理</a>
+                        <a class="dropdown-item hover" href="">导览信息管理</a>
+                        <a class="dropdown-item hover" href="">反馈评价信息管理</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="" method="get">
+                <input class="form-control mr-sm-2" type="search" placeholder="请输入搜索内容" aria-label="Search" name="key">
+                <button class="btn btn-outline-success my-2 my-sm-0" onclick="return search()" id="search" type="submit" style="color: white;opacity: 0.8;">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="bottom" style="height: 125px; background-color: #00785a;position: absolute;width: 100%;bottom: 0;">
+    <div class="container" style="color: white;text-align: center">
+        <div style="padding-top: 25px;">
+            <div>版权所有 2023 东北林业大学</div>
+            <div>联系我们：黑龙江省哈尔滨市和兴路26号东北林业大学</div>
+            <div>邮编：150040</div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    search(){
+        alert();
+    };
+</script>
+</html>

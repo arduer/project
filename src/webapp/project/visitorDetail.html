@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>森博信息_通知公告</title>
+    <link rel="stylesheet" href="bootstrap/css/base.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="head.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<!-- head start -->
+<div id="NavContent"></div>
+<script>
+    fetch('head.html')
+        .then(response => response.text())
+        .then(data => {
+            // 将获取的HTML内容插入到页面中
+            document.getElementById('NavContent').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+<div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <img width="100%" src="img/banner2.jpg" alt="静态大图">
+    </div>
+</div>
+<!-- head end -->
+<div class="clear"></div>
+<div class="W1200">
+    <div class="FL W360">
+        <div class="left_title">
+            <h2>后台管理</h2>
+            <p>
+                <span></span>
+            </p>
+        </div>
+        <div class="sidemenu">
+            <ul>
+                <li><a href="visitor1.html">游客信息</a></li>
+                <li><a href="feedback.html">反馈管理</a></li>
+
+
+
+            </ul>
+        </div>
+    </div>
+    <div class="FR W750">
+        <div class="breadcrumb">
+            当前位置：<a href="index.html">后台管理</a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            <a href="visitor1.html">游客信息</a>
+            &nbsp;&nbsp;/&nbsp;&nbsp;
+            <a href="visitorDetail.html">游客详细信息</a>
+
+
+        </div>
+        <div class="clear"></div>
+        <div class="con">
+            <p>姓名：海绵宝宝</p>
+            <p>电话号码：1234566777</p>
+            <p>证件类型：身份证</p>
+            <p>
+                证件号码：1234567785432
+            </p>
+            <p>预约参观时间：2023/12/12/16:59</p>
+            <p>预约离开时间：2023/12/12/18:00</p>
+            <p>实际进馆时间：2023/12/12/17:00</p>
+            <p>实际出馆时间：2023/12/12/18:59</p>
+
+        </div>
+
+    </div>
+    <div class="clear"></div>
+</div>
+
+</body>
+</html>

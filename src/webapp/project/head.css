@@ -17,7 +17,7 @@ body {
     background-image: url('./img/background.png'); /* 替换 'your-image-url.jpg' 为您的图片链接或路径 */
     background-repeat: repeat; /* 设置背景图片重复 */
     background-size: auto; /* 图片大小自适应 */
-    opacity: 0.6; /* 设置背景透明度 */
+    opacity: 0.3; /* 设置背景透明度 */
 }
 .container{
     position: relative;

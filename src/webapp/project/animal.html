@@ -6,9 +6,57 @@
               <title>藏品精粹</title>
               <link rel="stylesheet" href="bootstrap/css/base.css">
               <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="head.css">
+              <link rel="stylesheet" href="head.css">
               <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .view {
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            box-shadow: 1px 1px 2px #e6e6e6;
+            cursor: pointer;
+        }
+        .view .mask, .view .content {
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0
+        }
 
+        .view a.info {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            padding: 80px 35px;
+            font-size: 15px;
+            background: #000;
+            color: #c8ecba;
+            text-transform: uppercase;
+            box-shadow: 0 0 1px #000
+        }
+        .view a.info:hover {
+            box-shadow: 0 0 5px #000
+        }
+        .view-first .mask {
+            opacity: 0;
+            background-color: rgba(0,0,0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+        .view-first a.info{
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+        }
+        .view-first:hover .mask {
+            opacity: 0.6;
+        }
+        .view-first:hover a.info {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .view-first:hover a.info {
+            transition-delay: 0.2s;
+        }
+    </style>
 </head>
 <body>
 <div id="NavContent"></div>
@@ -16,7 +64,6 @@
     fetch('head.html')
         .then(response => response.text())
         .then(data => {
-            // 将获取的HTML内容插入到页面中
             document.getElementById('NavContent').innerHTML = data;
         })
         .catch(error => console.error('Error:', error));
@@ -64,86 +111,119 @@
                 </div>
                 <div class="clear"></div>
                 <div class="pic_list">
-                            <ul>
-                                          <li style="margin-top: 20px;">
-                                                        <a href="adetails.html">
-                                                                      <div class="img">
-                                                                                   <img src="img/img1.jpg" alt="绿头鸭">       
-                                                                      </div>
-                                                                      <p>绿头鸭</p>
-                                                        </a>
+                    <ul>
+                        <li style="margin-top: 20px;">
+                                              <div class="view view-first">
+                                                              <div class="img">
+                                                                  <img src="img/img1.jpg" alt="绿头鸭">
+                                                              </div>
+                                                              <div class="overlay"></div>
+                                                              <p>绿头鸭</p>
+                                                  <div class="mask">
+                                                      <a href="adetails.html" class="info">点击获取更多绿头鸭信息</a>
+                                                  </div>
+                                              </div>
                                           </li>
-                                          <li style="margin-top: 20px;">
-                                                        <a href="adetails.html">
-                                                                      <div class="img">
-                                                                                   <img src="img/img2.jpg" alt="八哥">       
-                                                                      </div>
-                                                                      <p>八哥</p>
-                                                        </a>
-                                          </li>
-                                          <li style="margin-top: 20px;">
-                                                        <a href="adetails.html">
-                                                                      <div class="img">
-                                                                                   <img src="img/img1.jpg" alt="八哥">       
-                                                                      </div>
-                                                                      <p>八哥</p>
-                                                        </a>
-                                          </li>
-                                          <li style="margin-top: 20px;">
-                                                        <a href="adetails.html">
-                                                                      <div class="img">
-                                                                                   <img src="img/img4.jpg" alt="绿头鸭">       
-                                                                      </div>
-                                                                      <p>绿头鸭</p>
-                                                        </a>
-                                          </li>
-                                          <li style="margin-top: 20px;">
-                                                        <a href="adetails.html">
-                                                                      <div class="img">
-                                                                                   <img src="img/img3.jpg" alt="黑枕黄鹂">       
-                                                                      </div>
-                                                                      <p>黑枕黄鹂</p>
-                                                        </a>
-                                          </li>
-                                          <li style="margin-top: 20px;">
-                                                        <a href="adetails.html">
-                                                                      <div class="img">
-                                                                                   <img src="img/img4.jpg" alt="绿头鸭">       
-                                                                      </div>
-                                                                      <p>绿头鸭</p>
-                                                        </a>
-                                          </li>
-                                          <li style="margin-top: 20px;">
-                                                        <a href="adetails.html">
-                                                                      <div class="img">
-                                                                                   <img src="img/img1.jpg" alt="绿头鸭">       
-                                                                      </div>
-                                                                      <p>绿头鸭</p>
-                                                        </a>
-                                          </li>
-                                          <li style="margin-top: 20px;">
-                                                        <a href="adetails.html">
-                                                                      <div class="img">
-                                                                                   <img src="img/img3.jpg" alt="掠鸟">       
-                                                                      </div>
-                                                                      <p>掠鸟</p>
-                                                        </a>
-                                          </li>
-                                          <li style="margin-top: 20px;">
-                                                        <a href="adetails.html">
-                                                                      <div class="img">
-                                                                                   <img src="img/img2.jpg" alt="绿头鸭">       
-                                                                      </div>
-                                                                      <p>绿头鸭</p>
-                                                        </a>
-                                          </li>
-                            </ul>
+                        <li style="margin-top: 20px;">
+                            <div class="view view-first">
+                                <div class="img">
+                                    <img src="img/img2.jpg" alt="八哥">
+                                </div>
+                                <div class="overlay"></div>
+                                <p>八哥</p>
+                                <div class="mask">
+                                    <a href="adetails.html" class="info">点击获取更多八哥信息</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="view view-first">
+                                <div class="img">
+                                    <img src="img/img4.jpg" alt="绿头鸭">
+                                </div>
+                                <div class="overlay"></div>
+                                <p>绿头鸭</p>
+                                <div class="mask">
+                                    <a href="adetails.html" class="info">点击获取更多绿头鸭信息</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="view view-first">
+                                <div class="img">
+                                    <img src="img/img4.jpg" alt="绿头鸭">
+                                </div>
+                                <div class="overlay"></div>
+                                <p>绿头鸭</p>
+                                <div class="mask">
+                                    <a href="adetails.html" class="info">点击获取更多绿头鸭信息</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="view view-first">
+                                <div class="img">
+                                    <img src="img/img3.jpg" alt="黑枕黄鹂">
+                                </div>
+                                <div class="overlay"></div>
+                                <p>黑枕黄鹂</p>
+                                <div class="mask">
+                                    <a href="adetails.html" class="info">点击获取更多黑枕黄鹂信息</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="view view-first">
+                                <div class="img">
+                                    <img src="img/img1.jpg" alt="绿头鸭">
+                                </div>
+                                <div class="overlay"></div>
+                                <p>绿头鸭</p>
+                                <div class="mask">
+                                    <a href="adetails.html" class="info">点击获取更多绿头鸭信息</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="view view-first">
+                                <div class="img">
+                                    <img src="img/img3.jpg" alt="掠鸟">
+                                </div>
+                                <div class="overlay"></div>
+                                <p>掠鸟</p>
+                                <div class="mask">
+                                    <a href="adetails.html" class="info">点击获取更多掠鸟信息</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="view view-first">
+                                <div class="img">
+                                    <img src="img/img1.jpg" alt="绿头鸭">
+                                </div>
+                                <div class="overlay"></div>
+                                <p>绿头鸭</p>
+                                <div class="mask">
+                                    <a href="adetails.html" class="info">点击获取更多绿头鸭信息</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="view view-first">
+                                <div class="img">
+                                    <img src="img/img3.jpg" alt="黑枕黄鹂">
+                                </div>
+                                <div class="overlay"></div>
+                                <p>黑枕黄鹂</p>
+                                <div class="mask">
+                                    <a href="adetails.html" class="info">点击获取更多黑枕黄鹂信息</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
               </div>
-              
-              
 </div>
 <div class="clear"></div>
-
 </body>
 </html>

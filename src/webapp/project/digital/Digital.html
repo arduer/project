@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>数字化导览</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../head.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden; /* 防止图片超出屏幕时出现滚动条 */
+  }
+
+  #map {
+    width: 100%;
+    height: 100vh; /* 使用视口高度，确保图片高度占据整个屏幕 */
+    object-fit: cover; /* 保持纵横比并裁剪以填充整个容器 */
+    object-position: center center; /* 设置图片居中显示 */
+  }
+  #log{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+  }
+  #home {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+  }
+  #go{
+    position: absolute;
+    bottom: 100px;
+    left: 47%;
+  }
+  #pre{
+    position: absolute;
+    right: 70px;
+    bottom: 100px;
+  }
+  #pre_right{
+    position: absolute;
+    height: 600px;
+    right: 140px;
+    display: none;
+  }
+</style>
+<body>
+<img src="../img/logo11.png" alt="log" id="log">
+<a href="../index.html"><img src="../img/home.png" alt="回到主页" id="home">
+</a>
+<p style="color: white;position: absolute;top: 110px;right: 60px;font-size: 20px">回到主页</p>
+<a href="xuting.html" id="go"><img src="../img/go.png" alt="进入"></a>
+<div id="pre_right" style="height: 700px;"><img src="../img/pre_right.png" alt="详细信息">
+  <div style="position: absolute;z-index: 1000;top: 50px; right: 0px;color: white;font-size: 20px;padding: 10px;line-height: 1.5; letter-spacing: 2px; "><span >东北林业大学携手社会各界建设“中国（哈尔滨）森林博物馆”,以林型（种群、群落和生态系统）作为馆藏基石,承载原始森林、近现代森林和森林文化与生态文明所积淀的厚重内涵，从森林与自然界、森林与人类两大方向诠释人类社会与生态环境关系，全面展现林业发展历史，凝练森林文化内涵，传承行业精神，彰显生态文明，耦合社会经济,长效发挥“收藏与积淀、教育与研究、展示与交流、文明与进步”的功能，成为我国森林文化的新地标、生态文明的新窗口、一个可以影响未来的新起点。</span></div>
+</div>
+<a href="" id="pre"><img src="../img/pre.png" alt="详细信息"></a>
+<img src="../img/map.jpg" alt="大图" id="map">
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // 点击链接时触发的函数
+    $('#pre').click(function(event) {
+      // 阻止默认链接行为，以防止页面跳转
+      event.preventDefault();
+
+      // 改变图片
+      $('#imageToChange').attr('src', '../img/pre_right1.png'); // 替换为新的图片路径
+
+      // 显示/隐藏 div 元素
+      $('#pre_right').toggle();
+    });
+  });
+</script>
+</html>

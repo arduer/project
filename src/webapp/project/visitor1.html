@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>森博信息_通知公告</title>
+  <link rel="stylesheet" href="bootstrap/css/base.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="head.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    .list_content a{
+      right: 10px;
+      padding: 5px 10px;
+      background: #cccccc right;
+      border-radius: 5px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+<!-- head start -->
+<div id="NavContent"></div>
+<script>
+  fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+            // 将获取的HTML内容插入到页面中
+            document.getElementById('NavContent').innerHTML = data;
+          })
+          .catch(error => console.error('Error:', error));
+</script>
+<div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <img width="100%" src="img/banner2.jpg" alt="静态大图">
+  </div>
+</div>
+<!-- head end -->
+<div class="clear"></div>
+<div class="W1200">
+  <div class="FL W360">
+    <div class="left_title">
+      <h2>后台管理</h2>
+      <p>
+        <span></span>
+      </p>
+    </div>
+    <div class="sidemenu">
+      <ul>
+        <li><a href="visitor1.html">游客信息</a></li>
+        <li><a href="visitorDetail.html">反馈管理</a></li>
+        <li><a href="review.html">游客信息审核</a></li>
+
+
+
+
+      </ul>
+    </div>
+  </div>
+  <div class="FR W750">
+    <div class="breadcrumb">
+      当前位置：<a href="index.html">后台管理</a>
+      &nbsp;&nbsp;/&nbsp;&nbsp;
+      <a href="forest.html">游客信息</a>
+
+
+    </div>
+    <div class="clear"></div>
+    <div class="list_content">
+      <div style="alignment-baseline: text-bottom">
+
+        <ul>
+          <li>派大星
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="visitorDetail.html">详细信息</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="get.html" class="btn-1">删除记录</a>
+          </li><hr>
+          <li>灰太狼
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="visitorDetail.html">详细信息</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="get.html" class="btn-1">删除记录</a>
+          </li><hr>
+          <li>海绵宝宝
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="visitorDetail.html">详细信息</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="get.html" class="btn-1">删除记录</a>
+          </li><hr>
+          <li>开心超人
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="visitorDetail.html">详细信息</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="get.html" class="btn-1">删除记录</a>
+          </li><hr>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+
+</body>
+</html>

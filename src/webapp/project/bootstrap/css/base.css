@@ -13,11 +13,19 @@ li {
               overflow: hidden;
               clear: both;
 }
+
+.W1500 {
+    /*position: relative;*/
+   width: 1200px;
+    background-color: white;
+    margin: 0 auto;
+}
 .W1200 {
               width: 1200px;
               margin: 0 auto;
               padding: 0;
               font-weight: 500;
+              /*background-color: white;*/
 }
 .FL {
               float: left;
@@ -32,10 +40,11 @@ li {
               font-weight: 500;
 }
 .W750 {
-              width: 750px;
+              width: 800px;
               margin: 0 auto;
-              padding: 0;
+              padding: 20px;
               font-weight: 500;
+              background-color: white;
 }
 .left_title {
               background: #0d3803;

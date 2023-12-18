@@ -1,230 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>软件工程</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        html {
-            position: relative;
-            min-height: 100%;
-        }
-        body {
-            margin-bottom: 125px; /* 底部固定元素的高度，此处假设为60px */
-        }
-        .container{
-        //border: 2px solid red;
-            position: relative;
-        }
-        img {
-            border: 0;
-        }
-        ul,li {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            border: 0;
-        }
-        a {
-            text-decoration: none;
-            color: #200b0b;
-        }
-        .navbar {
-            transition: top 0.5s ease;
-        }
-
-        .sticky-top {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-        }
-        .navbar{
-            background-color: #91c5A9;
-        }
-        .navbar-collapse .hover:hover{
-            background-color: #91c5A9;
-            border-radius: 3px;
-        }
-        .navbar-collapse{
-            padding: 0;
-            margin: 0;
-        }
-        .bg-success{
-            background-color: #19692c!important;
-        }
-        .dropdown:hover .dropdown-menu{
-            display: block;
-        }
-        .carousel-item img{
-            height: 450px;
-        }
-        .sidebar{
-            position: relative;
-            text-align: center;
-            color: white;
-            padding: 0;
-            margin: 0;
-
-        }
-        .sidebar .top{
-            right: 0;
-            position: absolute;
-            top: -66px;
-            width: 100%;
-            padding: 10px 20px;
-            background-color: #19692c!important;
-        }
-        .sidebar a{
-            padding: 13px;
-        }
-        .sidebar a:hover{
-            background-color: #00785a;
-            color: white;
-        }
-        .context .border{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid blue;
-            width: 100%;
-            height: auto;
-        }
-        .text{
-            text-indent: 2em;
-            padding: 10px 15px;
-            font-size: 1.2em;
-            line-height: 2em;
-            text-align: justify;
-        }
-        .context table{
-            text-align: center;
-            margin: 50px 15px;
-            width: 100%;
-        }
-        .context table tr{
-            border-bottom: 1px solid grey;
-            padding: 10px 0;
-            display: flex;
-            align-items: flex-start;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation Bar</title>
 </head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    #navbar {
+        background-color: #333;
+        padding: 15px;
+        color: white;
+        position: fixed;
+        width: 100%;
+        top: -60px; /* 隐藏在页面顶部 */
+        transition: top 0.3s;
+    }
+
+    #navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #navbar a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .content {
+        padding: 20px;
+        margin-top: 60px; /* 为了防止内容被导航栏遮挡 */
+    }
+
+</style>
 <body>
-<!-- Placeholder for the content above the navigation bar -->
-<div class="header" style="height: 125px; background-color: #00785a;position: relative;">
-    <div class="container">
-        <a class="jk" href="#"><img src="img/logodouble.png" alt="学院logo" style="padding-top: 25px;"></a>
-        <a class="rg" href=""><img src="img/软件工程logo.png" alt="专业logo" style="height: 65px; width: auto; padding-top: 25px;"></a>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: white;position: absolute;right: 60px;bottom: 8px;width: 80px;height: 40px;font-size: 17px">管理员</button>
-        <a href="" style="position: absolute;right: 20px;bottom: 8px"><i class="material-icons" style="color: white;font-size: 30px;">perm_identity</i></a>
-        <div style="display: inline;position: absolute;right: 10px;top: 15px;">
-            <a href="https://cas.webvpn.nefu.edu.cn/cas/login?service=http%3A%2F%2Fi.nefu.edu.cn%2Fdcp%2Fforward.action%3Fpath%3D%2Fportal%2Fportal%26p%3Dhome" style="color: white;font-size: 12px;">数字东林</a> <pre style="display: inline;color: white"> | </pre>
-            <a href="https://www.nefu.edu.cn/" style="color: white;font-size: 12px;">学校官网</a> <pre style="display: inline;color: white"> | </pre>
-            <a href="https://ccec.nefu.edu.cn/" style="color: white;font-size: 12px;">学院官网</a> <pre style="display: inline;color: white"> | </pre>
-            <a href="https://en.nefu.edu.cn/" style="color: white;font-size: 12px;">English</a> <pre style="display: inline;color: white"> | </pre>
-            <a href="" style="color: white;font-size: 12px;">联系我们：12345678910</a>
-        </div>
-    </div>
-</div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
-    <div class="container">
-        <a class="navbar-brand hover" href="index.jsp" >首页</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown hover">
-                    <a class="nav-link dropdown-toggle" href="#" >
-                        专业介绍
-                    </a>
-                    <div class="dropdown-menu" style="margin: 0;opacity: 0.7">
-                        <a class="dropdown-item hover" href="Profession/profession/profession.html">专业简介</a>
-                        <a class="dropdown-item hover" href="Profession/direction/direction.html">方向简介</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown hover">
-                    <a class="nav-link dropdown-toggle" href="#" >
-                        实验室
-                    </a>
-                    <div class="dropdown-menu" style="margin: 0;opacity: 0.7">
-                        <a class="dropdown-item hover" href="lab/923/923.html">923创新实验室</a>
-                        <a class="dropdown-item hover" href="lab/925/925.html">925移动开发实验室</a>
-                        <a class="dropdown-item hover" href="lab/926/926.html">926摆烂实验室</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown hover">
-                    <a class="nav-link dropdown-toggle" href="#" >
-                        教师队伍
-                    </a>
-                    <div class="dropdown-menu" style="margin: 0;opacity: 0.7">
-                        <a class="dropdown-item hover" href="teacher/profeseer/professor.html">教授</a>
-                        <a class="dropdown-item hover" href="teacher/aprofessor/aprofessor.html">副教授</a>
-                        <a class="dropdown-item hover" href="teacher/lecture/lecture.html">讲师</a>
-                    </div>
-                </li>
-                <li class="nav-item hover">
-                    <a class="nav-link" href="https://ccec.nefu.edu.cn/jygz/jygz.htm">就业指南</a>
-                </li>
-                <li class="nav-item hover">
-                    <a class="nav-link" href="news">新闻</a>
-                </li>
-                <li class="nav-item hover">
-                    <a class="nav-link" href="notice">公告</a>
-                </li>
-                <li class="nav-item hover">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="请输入搜索内容" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: white;opacity: 0.8;">Search</button>
-            </form>
-        </div>
-    </div>
+SCADSCACZZCSDCSCSD
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
+<!-- 导航栏 -->
+<nav id="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
-<div><img src="img/all.png" alt="" style="width: 100%"></div>
-<div class="main container" style="display: flex">
-    <div class="context col-md-12">
-        <div class="border">
-            <div class="head" style="border-bottom: grey;background-color: #F1F1F1;flex-basis: 100%;"><h3 style="padding: 5px 10px;margin: 0;">详情</h3></div>
-            <div style="padding: 50px 20px 20px 20px;flex-basis: 100%;"><h3 style="text-align: center">关于选拔2021年入职优秀“2+3”辅导员拟留任专职辅导员岗位结果的公示</h3></div>
-            <div style="padding: 5px 0 20px 0;:">作者：教务处</div>
-            <div><p class="text">根据《东北林业大学辅导员队伍建设管理规定（2022年修订）》《东北林业大学“2+3”辅导员管理办法》《2023年东北林业大学选拔优秀“2+3”辅导员拟留任专职辅导员岗位工作实施方案》，学校拟从2021年入职“2+3”辅导员中选拔优秀人员留任专职辅导员岗位。经过个人申报、学院推荐和综合考核，确定周宇航、周雨滢、张慧斌、张佳源（排名不分先后）为拟留任人选。</p></div>
-        </div>
-        <br><br><br>
-    </div>
 
-</div>
-<div class="bottom" style="height: 125px; background-color: #00785a;position: absolute;width: 100%;bottom: 0;">
-    <div class="container" style="color: white;text-align: center">
-        <div style="padding-top: 25px;">
-            <div>版权所有 2023 东北林业大学计算机与控制工程学院 软件工程专业</div>
-            <div>联系我们：黑龙江省哈尔滨市和兴路26号东北林业大学</div>
-            <div>邮编：150040</div>
-        </div>
-    </div>
+<!-- 页面内容 -->
+<div class="content">
+    <!-- Your page content goes here -->
 </div>
 
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        var navbar = $(".navbar");
-        var stickyPoint = navbar.offset().top;
 
-        $(window).scroll(function() {
-            if ($(window).scrollTop() >= stickyPoint) {
-                navbar.addClass("sticky-top");
-            } else {
-                navbar.removeClass("sticky-top");
-            }
-        });
-    });
-</script>
 </body>
+<script>
+    // 当页面滚动时触发
+    window.onscroll = function() {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        // 如果滚动超过100px，导航栏就显示出来
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            // 否则，导航栏滑上去
+            document.getElementById("navbar").style.top = "-60px";
+        }
+    }
+
+</script>
 </html>

@@ -2,6 +2,7 @@ function search()
 {
     alert('该功能暂未开发！');
 };
+
 $(document).ready(function() {
     var navbar = $(".navbar");
     var stickyPoint = navbar.offset().top;
@@ -14,6 +15,7 @@ $(document).ready(function() {
         }
     });
 });
+
 // 当页面滚动时触发
 window.onscroll = function() {
     scrollFunction();

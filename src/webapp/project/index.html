@@ -196,20 +196,6 @@
 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        var navbar = $(".navbar");
-        var stickyPoint = navbar.offset().top;
 
-        $(window).scroll(function() {
-            if ($(window).scrollTop() >= stickyPoint) {
-                navbar.addClass("sticky-top");
-            } else {
-                navbar.removeClass("sticky-top");
-            }
-        });
-    });
-
-</script>
 </body>
 </html>

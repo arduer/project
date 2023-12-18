@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>森博信息_通知公告</title>
+  <link rel="stylesheet" href="bootstrap/css/base.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="head.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    table {
+      text-align: center;
+      outline-color: #c6c6c6;
+    }
+    #button1 a:link{
+      background-color: #0e3601;
+
+    }
+  </style>
+
+</head>
+<body>
+<!-- head start -->
+<div id="NavContent"></div>
+<script>
+  fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+            // 将获取的HTML内容插入到页面中
+            document.getElementById('NavContent').innerHTML = data;
+          })
+          .catch(error => console.error('Error:', error));
+</script>
+<div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <img width="100%" src="img/banner2.jpg" alt="静态大图">
+  </div>
+</div>
+<!-- head end -->
+<div class="clear"></div>
+<div class="W1200">
+  <div class="FL W360">
+    <div class="left_title">
+      <h2>后台管理</h2>
+      <p>
+        <span></span>
+      </p>
+    </div>
+    <div class="sidemenu">
+      <ul>
+        <li><a href="visitor1.html">游客信息</a></li>
+        <li><a href="feedback.html">反馈管理</a></li>
+        <li><a href="review.html">游客信息审核</a></li>
+
+
+
+      </ul>
+    </div>
+  </div>
+  <div class="FR W750">
+    <div class="breadcrumb">
+      当前位置：<a href="index.html">后台管理</a>
+      &nbsp;&nbsp;/&nbsp;&nbsp;
+      <a href="review.html">游客信息审核</a>
+
+
+
+    </div>
+    <div class="clear"></div>
+    <div class="con">
+      <form>
+        <table border="1">
+          <tr>
+          <th>序号</th>
+          <th>姓名</th>
+          <th>证件号</th>
+          <th>手机号</th>
+          <th>预约参观时间</th>
+          <th>预约离开时间</th>
+          <th>操作</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>&nbsp海绵宝宝&nbsp</td>
+            <td>&nbsp 1234567785432 &nbsp </td>
+            <td>&nbsp 1234566777&nbsp</td>
+            <td>&nbsp2023/12/12/16:59&nbsp</td>
+            <td>&nbsp2023/12/12/18:00&nbsp</td>
+            <td>&nbsp<input type="submit" value="同意"/>&nbsp|&nbsp<input type="submit" value="不同意"/>&nbsp</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>灰太狼</td>
+            <td>1234567785432</td>
+            <td>1234566777</td>
+            <td>2023/12/12/16:59</td>
+            <td>2023/12/12/18:00</td>
+            <td><input type="submit" value="同意"/>&nbsp|&nbsp<input type="submit" value="不同意"/></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>派大星</td>
+            <td>1234567785432</td>
+            <td>1234566777</td>
+            <td>2023/12/12/16:59</td>
+            <td>2023/12/12/18:00</td>
+            <td><input type="submit" value="同意"/>&nbsp|&nbsp<input type="submit" value="不同意" /></td>
+
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>喜羊羊</td>
+            <td>1234567785432</td>
+            <td>1234566777</td>
+            <td>2023/12/12/16:59</td>
+            <td>2023/12/12/18:00</td>
+            <td><input type="submit" value="同意"/>&nbsp|&nbsp<input type="submit" value="不同意"/></td>
+          </tr>
+        </table>
+      </form>
+
+
+    </div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+
+</body>
+</html>

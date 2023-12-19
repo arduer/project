@@ -52,6 +52,7 @@
       position: static;
       background: url("img/top3.png") repeat scroll;
       width: 70%;
+      padding: 40px;
     }
     .context {
       display: flex;
@@ -74,14 +75,10 @@
 <div class="header" style="height: 125px; background-image: url(img/top3.png);position: relative;">
   <div class="container">
     <a class="jk" href="#"><img src="img/logo11.png" alt="学院logo" style="padding-top: 25px;"></a>
-    <form action="">
-      <button class="btn btn-outline-success my-2 my-sm-0 admin" type="submit" style="color: #00785a;position: absolute;right: 60px;bottom: 60px;width: 100px;height: 40px;font-size: 17px">个人中心</button>
+    <form action="visitor1.html">
+      <button class="btn btn-outline-success my-2 my-sm-0 admin" type="submit" style="color: #00785a;position: absolute;right: 180px;bottom: 30px;width: 100px;height: 40px;font-size: 17px">管理员</button>
     </form>
-    <a href="" style="position: absolute;right: 20px;bottom: 60px"><i class="material-icons" style="color: #00785a;font-size: 30px;">perm_identity</i></a>
-    <form action="">
-      <button class="btn btn-outline-success my-2 my-sm-0 admin" type="submit" style="color: #00785a;position: absolute;right: 60px;bottom: 8px;width: 100px;height: 40px;font-size: 17px">管理员</button>
-    </form>
-    <a href="" style="position: absolute;right: 20px;bottom: 8px"><i class="material-icons" style="color: #00785a;font-size: 30px;">perm_identity</i></a>
+    <a href="" style="position: absolute;right: 140px;bottom: 30px"><i class="material-icons" style="color: #00785a;font-size: 30px;">perm_identity</i></a>
   </div>
 </div>
 <div id="NavContent" class="sticky-top"></div>
@@ -97,103 +94,32 @@
 <section>
   <img src="img/反馈.png" alt="期待反馈文字">
 </section>
-<div class="container main" class="shadow-lg p-3 mb-5 bg-white rounded">
-  <div class="table_content1">
-  </div>
-  <div class="context">
-    <form onsubmit="return submitTest();" onreset="resetTest()" >
-      <div class="input-group mb-3">
-        <div class="input-group-prepend ">
-          <span class="input-group-text" >姓名：</span>
-        </div>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="name" id="name">
-        <div class="input-group-prepend">
-          <span class="input-group-text bitian" style="color: red;" >*必填</span>
-        </div>
+<div class="container main" class="shadow-lg p-3 mb-5 bg-white rounded" >
+  <div class="table_content1"></div>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">请留下您的姓名：</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
       </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">证件类型：</label>
-        </div>
-        <select class="custom-select" id="inputGroupSelect01">
-          <option value="idCard">身份证</option>
-          <option value="huZhao">护照</option>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">选择反馈或建议类型：</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>博物馆设施</option>
+          <option>导览介绍</option>
+          <option>工作人员</option>
+          <option>平台相关</option>
+          <option>活动流程</option>
+          <option>其他</option>
         </select>
       </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend ">
-          <span class="input-group-text" >证件号码</span>
-        </div>
-        <input type="text" class="form-control" placeholder="ID Number" aria-label="Username" aria-describedby="basic-addon1" name="idNumber" id="idNumber">
-        <div class="input-group-prepend">
-          <span class="input-group-text bitian" style="color: red;" >*必填</span>
-        </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">请描述您的反馈建议</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend ">
-          <span class="input-group-text" >手机号码：</span>
-        </div>
-        <input type="text" class="form-control" placeholder="phone Number" aria-label="Username" aria-describedby="basic-addon1" name="tel" id="tel">
-        <div class="input-group-prepend">
-          <span class="input-group-text bitian" style="color: red;" >*必填</span>
-        </div>
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">参观群体：</label>
-        </div>
-        <select class="custom-select" id="inputGroupSelect02">
-          <option value="adult">成年人</option>
-          <option value="olds">老年人</option>
-          <option value="student">大学生</option>
-        </select>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend ">
-          <span class="input-group-text" >参观日期：</span>
-        </div>
-        <input type="date" class="form-control" placeholder="phone Number" aria-label="Username" aria-describedby="basic-addon1" name="date" id="date">
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend ">
-          <span class="input-group-text" >入馆时间：</span>
-        </div>
-        <input type="time" class="form-control" placeholder="phone Number" aria-label="Username" aria-describedby="basic-addon1" name="inTime" id="inTime">
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend ">
-          <span class="input-group-text" >出馆时间：</span>
-        </div>
-        <input type="time" class="form-control" placeholder="phone Number" aria-label="Username" aria-describedby="basic-addon1" name="outTime" id="outTime">
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend ">
-          <span class="input-group-text" >携带儿童：</span>
-        </div>
-        <input type="number" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="chNum" id="chNum">
-        <span class="input-group-text bitian" style="color: red;" >*每名成年人最多可以携带两名儿童</span>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend ">
-          <span class="input-group-text" >国别:</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="nation" id="nation">
-      </div>
-      是否校内人员：<label ><input type="radio"> 是</label> <label><input type="radio">否</label><br><br>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend ">
-          <span class="input-group-text" >学工（教工）号：</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="stuId" id="stuId">
-        <span class="input-group-text bitian" style="color: red;" >*仅本校人员填写</span>
-
-      </div>
-      <button type="submit" id="sub" class="btn btn-success">提交</button>
-      <button type="reset" id="re" class="btn btn-info">重置</button>
-
+      <button type="button" class="btn btn-success">提交</button>
+      <button type="reset" class="btn btn-info">重置</button>
     </form>
-
   </div>
 </div>
 
@@ -201,39 +127,7 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script>
-  $(document).ready(function() {
-    var navbar = $(".navbar");
-    var stickyPoint = navbar.offset().top;
 
-    $(window).scroll(function() {
-      if ($(window).scrollTop() >= stickyPoint) {
-        navbar.addClass("sticky-top");
-      } else {
-        navbar.removeClass("sticky-top");
-      }
-    });
-
-  });
-  function submitTest(){
-
-    var tel = document.getElementsByName("tel").value;
-    var idNumber = document.getElementsByName("idNumber").value;
-    var name = document.getElementsByName("name").value;
-    if (idNumber== null) {
-      alert("证件号不能为空");
-    }
-    else if (tel == null) {
-      alert("电话号码不能为空");
-    }
-    else if (name == null) {
-      alert("姓名不能为空");
-    }
-    return false;
-  }
-  function resetTest(){
-    document.getElementsByName("input").value("");
-    alert("已清空");
-  }
 
 </script>
 </body>

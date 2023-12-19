@@ -17,8 +17,13 @@
       background: #cccccc right;
       border-radius: 5px;
     }
-
-
+    table td{
+      text-align: center;
+      vertical-align: middle;
+    }
+    table tr{
+      border-bottom: 1px solid grey;
+    }
   </style>
 
 </head>
@@ -28,14 +33,10 @@
 <div class="header" style="height: 125px; background-image: url(img/top3.png);position: relative;">
   <div class="container">
     <a class="jk" href="#"><img src="img/logo11.png" alt="学院logo" style="padding-top: 25px;"></a>
-    <form action="">
-      <button class="btn btn-outline-success my-2 my-sm-0 admin" type="submit" style="color: #00785a;position: absolute;right: 60px;bottom: 60px;width: 100px;height: 40px;font-size: 17px">个人中心</button>
+    <form action="visitor1.html">
+      <button class="btn btn-outline-success my-2 my-sm-0 admin" type="submit" style="color: #00785a;position: absolute;right: 180px;bottom: 30px;width: 100px;height: 40px;font-size: 17px">管理员</button>
     </form>
-    <a href="" style="position: absolute;right: 20px;bottom: 60px"><i class="material-icons" style="color: #00785a;font-size: 30px;">perm_identity</i></a>
-    <form action="">
-      <button class="btn btn-outline-success my-2 my-sm-0 admin" type="submit" style="color: #00785a;position: absolute;right: 60px;bottom: 8px;width: 100px;height: 40px;font-size: 17px">管理员</button>
-    </form>
-    <a href="" style="position: absolute;right: 20px;bottom: 8px"><i class="material-icons" style="color: #00785a;font-size: 30px;">perm_identity</i></a>
+    <a href="" style="position: absolute;right: 140px;bottom: 30px"><i class="material-icons" style="color: #00785a;font-size: 30px;">perm_identity</i></a>
   </div>
 </div>
 <div id="NavContent" class="sticky-top"></div>
@@ -83,39 +84,52 @@
 
 
     </div>
+    <table style="width: 70%; padding: 30px;border-collapse: collapse;  ">
+      <tr>
+        <td style="width: 15%">派大星</td>
+        <td style="width: 30%">
+          <a href="visitorDetail.html" class="btn btn-primary" style="padding: 0;margin: 5px;">
+            <button type="button" class="btn btn-primary" style="">详细信息</button>
+          </a>
+        </td>
+        <td style="width: 30%">
+          <button type="button" class="btn btn-danger">删除记录</button>
+        </td>
+      </tr>
+      <td style="width: 15%">灰太狼</td>
+      <td style="width: 30%">
+        <a href="visitorDetail.html" class="btn btn-primary" style="padding: 0;margin: 5px;">
+          <button type="button" class="btn btn-primary" style="">详细信息</button>
+        </a>
+      </td>
+      <td style="width: 30%">
+        <button type="button" class="btn btn-danger">删除记录</button>
+      </td>
+      <tr>
+        <td style="width: 15%">海绵宝宝</td>
+        <td style="width: 30%">
+          <a href="visitorDetail.html" class="btn btn-primary" style="padding: 0;margin: 5px;">
+            <button type="button" class="btn btn-primary" style="">详细信息</button>
+          </a>
+        </td>
+        <td style="width: 30%">
+          <button type="button" class="btn btn-danger">删除记录</button>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 15%">开心超人</td>
+        <td style="width: 30%">
+          <a href="visitorDetail.html" class="btn btn-primary" style="padding: 0;margin: 5px;">
+            <button type="button" class="btn btn-primary" style="">详细信息</button>
+          </a>
+        </td>
+        <td style="width: 30%">
+          <button type="button" class="btn btn-danger">删除记录</button>
+        </td>
+      </tr>
+    </table>
     <div class="clear"></div>
-    <div class="list_content">
-      <div style="alignment-baseline: text-bottom">
 
-        <ul>
-          <li>派大星
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="visitorDetail.html">详细信息</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="get.html" class="btn-1">删除记录</a>
-          </li><hr>
-          <li>灰太狼
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="visitorDetail.html">详细信息</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="get.html" class="btn-1">删除记录</a>
-          </li><hr>
-          <li>海绵宝宝
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="visitorDetail.html">详细信息</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="get.html" class="btn-1">删除记录</a>
-          </li><hr>
-          <li>开心超人
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="visitorDetail.html">详细信息</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="get.html" class="btn-1">删除记录</a>
-          </li><hr>
-
-        </ul>
-
-      </div>
     </div>
 
   </div>

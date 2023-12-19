@@ -39,16 +39,34 @@
             font-size: 6vw;
             font-weight: 500;
         }
-        #div .div1 {
+        .box {
             border-radius: 10px;
             position: relative;
             /*top: 10vh;*/
             transition: .5s;
         }
+        .main .box:nth-child(1) {
+            transform: translate(-300px, 0) scale(0);
+        }
+        .main .box:nth-child(2) {
+            transform: translate(0, 300px) scale(0);
+        }
+        .main .box:nth-child(3) {
+            transform: translate(300px, 0) scale(0);
+        }
+
+        .main .box.active {
+            transform: translate(0, 0) scale(1);
+        }
+
+        #div .div1 {
+            border-radius: 10px;
+            position: relative;
+            transition: .5s;
+        }
         #div .div2 {
             border-radius: 10px;
             position: relative;
-            /*top: 10vh;*/
             transition: .5s;
         }
         #div .div1{
@@ -129,7 +147,7 @@
     <h2>欢迎访问森林博物馆！</h2>
 </section>
 <div class="main" style="display: flex;flex-wrap: wrap;align-items: center;vertical-align: center;">
-    <div class="shadow p-3 mb-5 bg-white rounded" style="width:30%;margin-left: 2%;">
+    <div class="shadow p-3 mb-5 bg-white rounded box" style="width:30%;margin-left: 2%;">
         <div class="news" style="position: relative;width: 100%;padding: 20px;">
             <div style="position: absolute;top: 10px;left: 10px">
                 <i class="material-icons" style="font-size: 35px;padding: 0;margin: 0;color: #00785a;">assignment</i>
@@ -169,7 +187,7 @@
             </table>
         </div>
     </div>
-    <div class="shadow p-3 mb-5 bg-white rounded" style="width: 30%;margin-left: 2%;margin-right: 2%">
+    <div class="shadow p-3 mb-5 bg-white rounded box" style="width: 30%;margin-left: 2%;margin-right: 2%">
         <div class="notice" style="position: relative;width: 100%;padding: 20px;">
             <div style="position: absolute;top: 10px;left: 10px">
                 <i class="material-icons" style="font-size: 35px;padding: 0;margin: 0;color: #00785a;">volume_up</i>
@@ -209,7 +227,7 @@
             </table>
         </div>
     </div>
-    <div class="shadow p-3 mb-5 bg-white rounded" style="width: 32%;margin-right: 2%;">
+    <div class="shadow p-3 mb-5 bg-white rounded box" style="width: 32%;margin-right: 2%;">
         <div class="notice" style="position: relative;width: 100%;padding: 20px;">
             <div style="position: absolute;top: 10px;left: 10px">
                 <i class="material-icons" style="font-size: 35px;padding: 0;margin: 0;color: #00785a;">accessibility</i>
@@ -342,6 +360,17 @@
 //
 //         })
 //     })
+const randomColorBlock = document.querySelectorAll('.box');
+
+const scrollTrigger = () => {
+    randomColorBlock.forEach((box) => {
+        if (box.offsetTop/3 <= window.scrollY) {
+            box.classList.add('active')
+        } else {
+            box.classList.remove('active')
+        }
+    });
+};
 const div1 = document.querySelector('.div1');
 
 const scrollTrigger1 = () => {
@@ -365,6 +394,7 @@ const scrollTrigger2 = () => {
 
     window.addEventListener('scroll', scrollTrigger1);
 window.addEventListener('scroll', scrollTrigger2);
+window.addEventListener('scroll', scrollTrigger);
 
 </script>
 </body>

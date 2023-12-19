@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="head.js"></script>
+    <link rel="stylesheet" href="head.css">
     <style>
         html {
             position: relative;
@@ -42,8 +43,10 @@
             height: 450px;
         }
         .main{
+            margin-top: 20px;
             position: static;
             background: url("img/top3.png") repeat scroll;
+            width: 70%;
         }
         .context {
             display: flex;
@@ -78,23 +81,16 @@
 </div>
 <div id="NavContent" class="sticky-top"></div>
 
-<div class="container main">
+<div class="container main" class="shadow-lg p-3 mb-5 bg-white rounded">
     <div class="table_content1">
-
-
-
-
-
     </div>
-
-
     <div class="context">
         <form onsubmit="return submitTest();" onreset="resetTest()" >
             <div class="input-group mb-3">
                 <div class="input-group-prepend ">
-                    <span class="input-group-text" name="name" id="name">姓名：</span>
+                    <span class="input-group-text" >姓名：</span>
                 </div>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="name" id="name">
                 <div class="input-group-prepend">
                     <span class="input-group-text bitian" style="color: red;" >*必填</span>
                 </div>
@@ -108,25 +104,75 @@
                     <option value="huZhao">护照</option>
                 </select>
             </div>
-            证件号码：<input type="text" name="idNumber" id="idNumber">
-            <span style="color: red">*必填</span><br><br>
-            手机号码：<input type="tel" name="tel" id="tel">
-            <span style="color: red">*必填</span><br><br>
-            参观群体：
-            <select>
-                <option value="adult">成年人</option>
-                <option value="olds">老年人</option>
-                <option value="student">大学生</option>
-            </select><br><br>
-            参观日期：<input type="date" name="date"><br><br>
-            入馆时间：<input type="time" name="inTime"><br><br>
-            出馆时间：<input type="time" name="outTime"><br><br>
-            携带儿童：<input type="number" name="chNum">
-            <span style="color: red">每名成年人最多可以携带两名儿童</span><br><br>
-            国别:<input type="text" name="nation"><br><br>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" >证件号码</span>
+                </div>
+                <input type="text" class="form-control" placeholder="ID Number" aria-label="Username" aria-describedby="basic-addon1" name="idNumber" id="idNumber">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bitian" style="color: red;" >*必填</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" >手机号码：</span>
+                </div>
+                <input type="text" class="form-control" placeholder="phone Number" aria-label="Username" aria-describedby="basic-addon1" name="tel" id="tel">
+                <div class="input-group-prepend">
+                    <span class="input-group-text bitian" style="color: red;" >*必填</span>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">参观群体：</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect02">
+                    <option value="adult">成年人</option>
+                    <option value="olds">老年人</option>
+                    <option value="student">大学生</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" >参观日期：</span>
+                </div>
+                <input type="date" class="form-control" placeholder="phone Number" aria-label="Username" aria-describedby="basic-addon1" name="date" id="date">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" >入馆时间：</span>
+                </div>
+                <input type="time" class="form-control" placeholder="phone Number" aria-label="Username" aria-describedby="basic-addon1" name="inTime" id="inTime">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" >出馆时间：</span>
+                </div>
+                <input type="time" class="form-control" placeholder="phone Number" aria-label="Username" aria-describedby="basic-addon1" name="outTime" id="outTime">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" >携带儿童：</span>
+                </div>
+                <input type="number" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="chNum" id="chNum">
+                <span class="input-group-text bitian" style="color: red;" >*每名成年人最多可以携带两名儿童</span>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" >国别:</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="nation" id="nation">
+            </div>
             是否校内人员：<label ><input type="radio"> 是</label> <label><input type="radio">否</label><br><br>
-            学工（教工）号：<input type="text" name="stuId">
-            <span style="color: red">仅本校人员填写</span><br><br>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text" >学工（教工）号：</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="stuId" id="stuId">
+                <span class="input-group-text bitian" style="color: red;" >*仅本校人员填写</span>
+
+            </div>
             <button type="submit" id="sub" class="btn btn-success">提交</button>
             <button type="reset" id="re" class="btn btn-info">重置</button>
 

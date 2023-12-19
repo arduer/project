@@ -4,44 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sticky Navigation Bar</title>
+    <style>
+        /* 初始的导航栏样式 */
+        .navbar {
+            background-color: #333;
+            padding: 15px;
+            color: white;
+            width: 100%;
+            transition: top 0.3s;
+        }
+
+        /* 固定的导航栏样式 */
+        .sticky-top {
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+        }
+
+        /* 为了防止内容被导航栏遮挡 */
+        .content {
+            padding: 20px;
+            margin-top: 60px;
+        }
+    </style>
 </head>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    #navbar {
-        background-color: #333;
-        padding: 15px;
-        color: white;
-        position: fixed;
-        width: 100%;
-        top: -60px; /* 隐藏在页面顶部 */
-        transition: top 0.3s;
-    }
-
-    #navbar ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    #navbar a {
-        text-decoration: none;
-        color: white;
-    }
-
-    .content {
-        padding: 20px;
-        margin-top: 60px; /* 为了防止内容被导航栏遮挡 */
-    }
-
-</style>
 <body>
+
+<!-- 包含动态元素的父容器 -->
+<div id="container">
+    <!-- 这里将通过 JavaScript 动态添加元素块 -->
+    <div class="navbar">
+        <!-- 导航栏的内容 -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="content">
+    <!-- Your page content goes here -->
+</div>
+
 SCADSCACZZCSDCSCSD
 <h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
 <h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
@@ -50,38 +56,57 @@ SCADSCACZZCSDCSCSD
 <h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
 <h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
 <h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1><h1>测试</h1>
-<!-- 导航栏 -->
-<nav id="navbar">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
 
-<!-- 页面内容 -->
-<div class="content">
-    <!-- Your page content goes here -->
-</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // 获取包含动态元素的父容器
+        var container = $("#container");
 
+        // 在父容器上使用事件委托监听子元素的滚动事件
+        container.on("scroll", ".navbar", function() {
+            var navbar = $(this);
+            var stickyPoint = navbar.offset().top;
+
+            if (container.scrollTop() >= stickyPoint) {
+                navbar.addClass("sticky-top");
+            } else {
+                navbar.removeClass("sticky-top");
+            }
+        });
+
+        // 模拟通过 JavaScript 动态添加元素块
+        setTimeout(function() {
+            var dynamicElement = $("<div class='navbar'><ul><li><a href='#'>Dynamic Link</a></li></ul></div>");
+            container.append(dynamicElement);
+        }, 2000); // 2秒后添加动态元素
+    });
+</script>
 
 </body>
-<script>
-    // 当页面滚动时触发
-    window.onscroll = function() {
-        scrollFunction();
-    };
-
-    function scrollFunction() {
-        // 如果滚动超过100px，导航栏就显示出来
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            // 否则，导航栏滑上去
-            document.getElementById("navbar").style.top = "-60px";
-        }
-    }
-
-</script>
 </html>
+function search()
+{
+alert('该功能暂未开发！');
+};
+fetch('head.html')
+.then(response => response.text())
+.then(data => {
+// 将获取的HTML内容插入到页面中
+document.getElementById('NavContent').innerHTML = data;
+})
+.catch(error => console.error('Error:', error));
+
+var container = $("#NavContent");
+document.addEventListener('DOMContentLoaded', function() {
+var navbar = document.querySelector('.navbar');
+var stickyPoint = navbar.offsetTop;
+
+window.addEventListener('scroll', function() {
+if (window.scrollY >= stickyPoint) {
+navbar.classList.add('sticky-top');
+} else {
+navbar.classList.remove('sticky-top');
+}
+});
+});

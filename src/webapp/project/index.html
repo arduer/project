@@ -6,13 +6,23 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="head.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="head.js"></script>
+    <script>
+        document.write("<span id=time></span>")//输出显示时间日期的容器
+        //每1000毫秒(即1秒) 执行一次本段代码
+        setInterval("time.innerText=new Date().toLocaleString()",1000)
+    </script>
     <style>
-        .cpjc{
-            position: center;
+        .div .div1{
+            transform: translate(-100px,0) scale(0);
         }
-        .cpjc:hover{
-            color: white;
+        .div .div2{
+            transform: translate(100px,0) scale(0);
+        }
+        .div .div1.active{
+            transform: translate(0,0) scale(1);
         }
     </style>
 </head>
@@ -68,140 +78,221 @@
 </div>
 
 <br><br>
-<div class="container main" style="display: flex;flex-wrap: wrap;align-items: center;vertical-align: center;">
-        <div class="shadow p-3 mb-5 bg-white rounded" style="width: 48%;margin-right: 2%;">
-            <div class="news" style="position: relative;width: 100%;padding: 20px;">
-                <div style="position: absolute;top: 10px;left: 10px">
-                    <i class="material-icons" style="font-size: 35px;padding: 0;margin: 0;color: #00785a;">assignment</i>
-                    <h3 style="display: inline-block;">新闻资讯</h3>
-                </div>
-                <div style="position: absolute;top: 10px;right: 10px;">
-                    <label for="more" ><<<a href="forest01.html" id="more">更多信息</a></label>
-                </div>
-                <br>
-                <hr class="bg-dark">
-                <br>
-                <table style="width: 100%;">
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">让博物馆成为中小学校教育教学的课堂</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-11-24</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">博物馆党支部组织教职工集中观看电影《...</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-10-20</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">【主题教育】博物馆党支部开展主题教育...</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-06-08</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">【主题教育】博物馆党支部开展主题教育...</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-05-25</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">【主题教育】茶和生活·共品共享</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-05-22</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">【主题教育】践行生态文明·建设美丽中国</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-05-18</td>
-                    </tr>
-                </table>
+<div class="main" style="display: flex;flex-wrap: wrap;align-items: center;vertical-align: center;">
+    <div class="shadow p-3 mb-5 bg-white rounded" style="width:30%;margin-left: 2%;">
+        <div class="news" style="position: relative;width: 100%;padding: 20px;">
+            <div style="position: absolute;top: 10px;left: 10px">
+                <i class="material-icons" style="font-size: 35px;padding: 0;margin: 0;color: #00785a;">assignment</i>
+                <h3 style="display: inline-block;">新闻资讯</h3>
             </div>
-        </div>
-        <div class="shadow p-3 mb-5 bg-white rounded" style="width: 48%;margin-left: 2%;">
-            <div class="notice" style="position: relative;width: 100%;padding: 20px;">
-                <div style="position: absolute;top: 10px;left: 10px">
-                    <i class="material-icons" style="font-size: 35px;padding: 0;margin: 0;color: #00785a;">volume_up</i>
-                    <h3 style="display: inline-block;">通知公告</h3>
-                </div>
-                <div style="position: absolute;top: 10px;right: 10px;">
-                    <label for="more2" ><<<a href="forest02.html" id="more2">更多信息</a></label>
-                </div>
-                <br>
-                <hr class="bg-dark">
-                <br>
-                <table style="width: 100%;">
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">关于开展“青少年林草科普调研”</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-11-10</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆预约参观指南</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-10-05</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">关于迎新期间中国（哈尔滨）森林博物馆...</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-08-30</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">闭馆通知</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-07-15</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">声明</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-06-01</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆讲解员招聘启...</a></td>
-                        <td style="width: 30%;padding: 8px;text-align: right">2023-05-23</td>
-                    </tr>
-                </table>
+            <div style="position: absolute;top: 10px;right: 10px;">
+                <label for="more" ><<<a href="forest01.html" id="more">更多信息</a></label>
             </div>
-        </div>
-</div>
-<div style="display:flex;height: 100px" >
-    <div style="background:white;width: 150px;height:70px;margin-left: 20px;border-radius: 10px;display:inline-block">
-        <p style="height:10px;text-align: center">预约服务请点击此处</p>
-        <hr>
-        <a href="reserve.html"><img src="img/预约.jpg" alt="" style="width: 150px;"></a>
-    </div>
-    <div style="background: #7abaff;width: 300px;margin-left: 20px;border-radius: 10px;height: 70px">
-        <p style="height:10px;color:white;text-align: center">参观导览</p>
-        <div style="display: flex">
-            <div style="width: 150px;border: 1px solid blue;height:65px;border-radius: 10px;background: #9fcdff;text-align: center">
-                <a href="cpjc.html" class="cpjc" style="line-height: 65px">藏品精粹</a>
-            </div>
-            <div style="width: 150px;border: 1px solid blue;height:65px;border-radius: 10px;background: #007bff;text-align: center">
-                <a href="digital/Digital.html" class="cpjc" style="line-height: 65px">数字化导览</a>
-            </div>
+            <br>
+            <hr class="bg-dark">
+            <br>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">让博物馆成为中小学校教育教学...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-11-24</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">博物馆党支部组织教职工集中观...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-10-20</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">【主题教育】博物馆党支部开展...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-06-08</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">【主题教育】博物馆党支部开展...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-05-25</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">【主题教育】茶和生活·共品共享</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-05-22</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">【主题教育】践行生态文明·建设...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-05-18</td>
+                </tr>
+            </table>
         </div>
     </div>
-    <div style="background:deeppink;width: 450px;margin-left: 20px;border-radius: 10px;height: 70px">
-    <p style="height:10px;color:white;text-align: center">后台信息管理</p>
-    <div style="display: flex">
-        <div style="width: 150px;border: 1px solid green;height:65px;border-radius: 10px;background: pink;text-align: center">
-            <a href="" class="cpjc" style="line-height: 65px">游客信息管理</a>
-        </div>
-        <div style="width: 150px;border: 1px solid green;height:65px;border-radius: 10px;background: hotpink;text-align: center">
-            <a href="" class="cpjc" style="line-height: 65px">导览信息管理</a>
-        </div>
-        <div style="width: 150px;border: 1px solid green;height:65px;border-radius: 10px;background: #ffb6f3;text-align: center">
-            <a href="" class="cpjc" style="line-height: 65px">反馈评价信息管理</a>
-        </div>
-    </div>
-    </div>
-    <div style="background:darkgreen;width: 300px;margin-left: 20px;border-radius: 10px;height: 70px">
-        <p style="height:10px;color:white;text-align: center">资讯快览</p>
-        <div style="display: flex">
-            <div style="width: 150px;border: 1px solid green;height:65px;border-radius: 10px;background: green;text-align: center">
-                <a href="forest.html" class="cpjc" style="line-height: 65px">森博资讯</a>
+    <div class="shadow p-3 mb-5 bg-white rounded" style="width: 30%;margin-left: 2%;margin-right: 2%">
+        <div class="notice" style="position: relative;width: 100%;padding: 20px;">
+            <div style="position: absolute;top: 10px;left: 10px">
+                <i class="material-icons" style="font-size: 35px;padding: 0;margin: 0;color: #00785a;">volume_up</i>
+                <h3 style="display: inline-block;">通知公告</h3>
             </div>
-            <div style="width: 150px;border: 1px solid green;height:65px;border-radius: 10px;background: lawngreen;text-align: center">
-                <a href="forest03.html" class="cpjc" style="line-height: 65px">志愿者文化</a>
+            <div style="position: absolute;top: 10px;right: 10px;">
+                <label for="more1" ><<<a href="forest02.html" id="more1">更多信息</a></label>
             </div>
+            <br>
+            <hr class="bg-dark">
+            <br>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">关于开展“青少年林草科普调研”</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-11-10</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆预约...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-10-05</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">关于迎新期间中国（哈尔滨）森...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-08-30</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">闭馆通知</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-07-15</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">声明</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-06-01</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆讲解...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-05-23</td>
+                </tr>
+            </table>
         </div>
     </div>
-
-    <div style="background:#404457;width: 150px;height:70px;margin-left: 20px;border-radius: 10px;display:inline-block">
-    <p style="height:10px;text-align: center;color: white;">反馈与评价</p>
-    <hr>
-    <a href=""><img src="img/反馈.png" alt="" style="width: 150px;height: 50px"></a>
+    <div class="shadow p-3 mb-5 bg-white rounded" style="width: 32%;margin-right: 2%;">
+        <div class="notice" style="position: relative;width: 100%;padding: 20px;">
+            <div style="position: absolute;top: 10px;left: 10px">
+                <i class="material-icons" style="font-size: 35px;padding: 0;margin: 0;color: #00785a;">accessibility</i>
+                <h3 style="display: inline-block;">志愿者文化</h3>
+            </div>
+            <div style="position: absolute;top: 10px;right: 10px;">
+                <label for="more2" ><<<a href="forest03.html" id="more2">更多信息</a></label>
+            </div>
+            <br>
+            <hr class="bg-dark">
+            <br>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆志愿者协...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2021-11-25</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆志愿者协...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-10-30</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆“学雷锋...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-04-12</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">森博新老成员相聚，志愿精神薪火...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2022-10-24</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆举办2020...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2022-06-09</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆开展“传...</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2022-06-21</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
+<div id="div" style="width: 100%;display: flex">
+    <div class="div1" id="div1" style="color:white;height: 600px;width: 45%;background-image: url(img/模块背景.jpg);margin-left:3%;margin-right:4%;border-radius: 15px">
+        <div style="height: 300px;text-align: center;border-bottom: 1px solid orange">
+            <i class="material-icons" style="font-size: 27px;padding: 0;margin-top: 0;color:white;">access_time</i>
+            <span style="color: white;font-size: 27px">当前时间：</span>
+            <span id="time" style="color: white;font-size: 27px"></span>
+            <br>
+            <span style="color: white;font-size: 35px">今日开馆</span>
+            <br>
+            <span>本馆若无特殊情况均不闭馆，如若闭馆会在通知公告处说明</span>
+            <br>
+            <span style="color: red">参观者须至少<b>提前一天</b>进行预约，最早可于七天前进行预约，入馆需携带<b>身份证</b>进行检票</span>
+            <br>
+            <span style="font-size: 50px">8:00---17:00---18:00</span>
+            <br>
+            <pre style="font-size: 20px;color:pink;text-align: left">          开始入馆时间   停止入馆时间       闭馆时间</pre>
+        </div>
+        <div style="width: 100%;height: 300px;display: flex">
+            <div style="width: 50%;text-align: center;height:300px;border-right: 1px solid gold;">
+                <i class="material-icons" style="font-size: 30px;padding: 0;margin: 0;color:white;">tablet</i>
+                <span style="font-size: 27px">在线预约</span>
+                <br>
+                <a href="reserve.html"><img src="img/预约服务.png" alt="预约服务" style="width: auto;height: 150px"></a>
+                <br>
+                <pre style="color:deepskyblue;font-size: 20px">详  情  请  咨  询<br>18814519814<br>服务时间00:00-23:59</pre>
+            </div>
+            <div style=";height: 300px;width: 50%;text-align: center;">
+                <i class="material-icons" style="font-size: 30px;padding: 0;margin: 0;color:white;">swap_calls</i>
+                <span style="font-size: 27px">数字化导览</span>
+                <br>
+                <a href="digital/Digital.html"><img src="img/数字化导览.png" alt="数字化导览" style="width: auto;height: 150px"></a>
+                <br>
+                <pre style="color:lightyellow;font-size: 20px">交通路线：<br>黑龙江省哈尔滨市香坊区<br>东北林业大学</pre>
+            </div>
+        </div>
+    </div>
+    <div class="div2" id="div2" style="color:white;height: 600px;width: 45%;background-size:100% 100%;background-image: url(img/模块背景2.png);margin-left:4%;position:relative;right: 3%;border-radius: 15px;background-repeat: no-repeat">
+        <div style="height: 300px;text-align: center;border-bottom: 1px solid orange">
+            <i class="material-icons" style="font-size: 30px;padding: 0;margin: 0;color:white;">local_activity</i>
+            <span style="font-size: 27px">特色展览</span>
+            <br>
+            <a href="cpjc.html"><img src="img/兴安落叶松.jpg" alt="" style="width: 250px;height: 200px;margin-right: 55px;border-radius: 50%"></a>
+            <a href="animal.html"><img src="img/img1.jpg" alt="" style="width: 250px;height: 200px;margin-left: 55px;border-radius: 50%"></a>
+            <br>
+            <pre style="color:white;font-size: 27px">植物藏品                  动物藏品</pre>
+        </div>
+        <div style="width: 100%;height: 300px;display: flex">
+            <div style="width: 50%;text-align: center;height:300px;border-right: 1px solid gold;">
+                <i class="material-icons" style="font-size: 30px;padding: 0;margin: 0;color:white;">filter_frames</i>
+                <span style="font-size: 27px">反馈与评价</span>
+                <br>
+                <a href=""><img src="img/反馈与评价1.png" alt="预约服务" style="width: auto;height: 150px"></a>
+                <br>
+                <pre style="color:white;font-size: 20px">非常感谢您对我们的信任，<br>我们会继续用心服务，<br>让您的满意始终是我们的追求</pre>
+            </div>
+            <div style=";height: 300px;width: 50%;text-align: center;">
+                <i class="material-icons" style="font-size: 30px;padding: 0;margin: 0;color:white;">language</i>
+                <span style="font-size: 27px">后台信息管理</span>
+                <br>
+                <ol class="list"></ol>
+                <a href=""><img src="img/后台信息管理.png" alt="数字化导览" style="width: auto;height: 150px"></a>
+                <br>
+                <pre style="color:white;font-size: 20px">暂未开放！</pre>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function (){
+        var min_height=601;
+        $(window).scroll(function (){
+            var s=$(window).scrollTop();
+/*            if(s>min_height){
+                $("#div").fadeIn(500);
+            }else{
+                $("#div").fadeOut(500);
+            }*/
+/*            if(s>min_height){
+                $("#div").slideDown(500);
+            }else{
+                $("#div").slideUp(500);
+            }*/
+            if(s>min_height){
+                $("#div").show(500);
+            }else{
+                $("#div").hide(500);
+            }
 
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
 
+        })
+    })
+    window.addEventListener('scroll', scrollTrigger);
+
+</script>
 </body>
 </html>

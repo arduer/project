@@ -8,12 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="head.js"></script>
     <style>
-        .cpjc{
-            position: center;
-        }
-        .cpjc:hover{
-            color: white;
-        }
+
     </style>
 </head>
 <body>
@@ -26,6 +21,10 @@
             document.getElementById('NavContent').innerHTML = data;
         })
         .catch(error => console.error('Error:', error));
+    document.write("<span id=time></span>")//输出显示时间日期的容器
+    //每1000毫秒(即1秒) 执行一次本段代码
+    setInterval("time.innerText=new Date().toLocaleString()",1000)
+
 </script>
 <div class="bd-example">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -110,7 +109,7 @@
                     <h3 style="display: inline-block;">通知公告</h3>
                 </div>
                 <div style="position: absolute;top: 10px;right: 10px;">
-                    <label for="more2" ><<<a href="forest02.html" id="more2">更多信息</a></label>
+                    <label for="more1" ><<<a href="forest02.html" id="more1">更多信息</a></label>
                 </div>
                 <br>
                 <hr class="bg-dark">
@@ -143,8 +142,70 @@
                 </table>
             </div>
         </div>
+    <!--<div class="shadow p-3 mb-5 bg-white rounded" style="width: 33%;margin-left: 2%;">
+        <div class="notice" style="position: relative;width: 100%;padding: 20px;">
+            <div style="position: absolute;top: 10px;left: 10px">
+                <i class="material-icons" style="font-size: 35px;padding: 0;margin: 0;color: #00785a;">accessibility</i>
+                <h3 style="display: inline-block;">志愿者文化</h3>
+            </div>
+            <div style="position: absolute;top: 10px;right: 10px;">
+                <label for="more2" ><<<a href="forest03.html" id="more2">更多信息</a></label>
+            </div>
+            <br>
+            <hr class="bg-dark">
+            <br>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆志愿者协会荣获第十届“母亲河奖”</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2021-11-25</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆志愿者协会 举行2023届新志愿者培训活动</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-10-30</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆“学雷锋精神、为志愿添彩、扬东林新风”</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2023-04-12</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">森博新老成员相聚，志愿精神薪火相传</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2022-10-24</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆举办2020-2021年度志愿者工作总结表彰大会</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2022-06-09</td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;"><a href="getnews?nid=${n.id }" style="display: block;">中国（哈尔滨）森林博物馆开展“传森博力量，铸生态之美”主题科普志愿活动</a></td>
+                    <td style="width: 30%;padding: 8px;text-align: right">2022-06-21</td>
+                </tr>
+            </table>
+        </div>
+    </div>-->
 </div>
-<div style="display:flex;height: 100px" >
+<div style="color:white;height: 600px;width: 37%;background-image: url(img/模块背景.jpg);position:relative;left: 30px;border-radius: 15px">
+    <div style="height: 300px;text-align: center;border-bottom: 1px solid orange">
+        <i class="material-icons" style="font-size: 27px;padding: 0;margin-top: 0;color:white;">access_time</i>
+        <span style="color: white;font-size: 27px">当前时间：</span>
+        <span id="time" style="color: white;font-size: 27px"></span>
+        <br>
+        <span style="color: white;font-size: 35px">今日开馆</span>
+        <br>
+        <span>本馆若无特殊情况均不闭馆，如若闭馆会在通知公告处说明</span>
+        <br>
+        <span style="color: red">参观者须至少<b>提前一天</b>进行预约，最早可于七天前进行预约，入馆需携带<b>身份证</b>进行检票</span>
+        <br>
+        <span style="font-size: 50px">8:00---17:00---18:00</span>
+        <br>
+        <pre style="font-size: 20px;color:white;text-align: left">     开始入馆时间   停止入馆时间       闭馆时间</pre>
+    </div>
+    <div style="width: 50%;text-align: center">
+        <i class="material-icons" style="font-size: 30px;padding: 0;margin: 0;color:white;">tablet</i>
+        <span style="font-size: 27px">在线预约</span>
+
+    </div>
+</div>
+<!--<div style="display:flex;height: 100px" >
     <div style="background:white;width: 150px;height:70px;margin-left: 20px;border-radius: 10px;display:inline-block">
         <p style="height:10px;text-align: center">预约服务请点击此处</p>
         <hr>
@@ -192,7 +253,7 @@
     <hr>
     <a href=""><img src="img/反馈.png" alt="" style="width: 150px;height: 50px"></a>
     </div>
-</div>
+</div>-->
 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>

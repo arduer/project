@@ -5,6 +5,7 @@
     <title>游客预约</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="head.js"></script>
     <style>
         html {
             position: relative;
@@ -61,16 +62,21 @@
     </style>
 </head>
 <body>
-<div id="NavContent"></div>
-<script>
-    fetch('head.html')
-        .then(response => response.text())
-        .then(data => {
-            // 将获取的HTML内容插入到页面中
-            document.getElementById('NavContent').innerHTML = data;
-        })
-        .catch(error => console.error('Error:', error));
-</script>
+<div class="bg-image"></div>
+<div class="header" style="height: 125px; background-image: url(img/top3.png);position: relative;">
+    <div class="container">
+        <a class="jk" href="#"><img src="img/logo11.png" alt="学院logo" style="padding-top: 25px;"></a>
+        <form action="">
+            <button class="btn btn-outline-success my-2 my-sm-0 admin" type="submit" style="color: #00785a;position: absolute;right: 60px;bottom: 60px;width: 100px;height: 40px;font-size: 17px">个人中心</button>
+        </form>
+        <a href="" style="position: absolute;right: 20px;bottom: 60px"><i class="material-icons" style="color: #00785a;font-size: 30px;">perm_identity</i></a>
+        <form action="">
+            <button class="btn btn-outline-success my-2 my-sm-0 admin" type="submit" style="color: #00785a;position: absolute;right: 60px;bottom: 8px;width: 100px;height: 40px;font-size: 17px">管理员</button>
+        </form>
+        <a href="" style="position: absolute;right: 20px;bottom: 8px"><i class="material-icons" style="color: #00785a;font-size: 30px;">perm_identity</i></a>
+    </div>
+</div>
+<div id="NavContent" class="sticky-top"></div>
 
 <div class="container main">
     <div class="table_content1">

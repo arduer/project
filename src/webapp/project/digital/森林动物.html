@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>序厅</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="head.css">
+</head>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden; /* 防止图片超出屏幕时出现滚动条 */
+  }
+  #xuting {
+    width: 100%;
+    height: 100vh; /* 使用视口高度，确保图片高度占据整个屏幕 */
+    object-fit: cover; /* 保持纵横比并裁剪以填充整个容器 */
+    object-position: center center; /* 设置图片居中显示 */
+  }
+  #home {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+  }
+  #logo2{
+    position: absolute;
+    left: 35%;
+  }
+  #h11{
+    position: absolute;
+    top: 10px;
+    left: 48%;
+  }
+  #nav{
+    position: absolute;
+    bottom: 150px;
+    height: 50px;
+    width: 200px;
+    background-color: #00785a;
+    border-radius: 10px;
+  }
+  #nav-img{
+    position: absolute;
+    left: 20px;
+    top: 12px;
+  }
+  .nav{
+    position: absolute;
+    background-color: #155724;
+    border-radius: 10px;
+    width: 200px;
+    top: 200px;
+    display: none;
+  }
+  .nav-link{
+    color: white;
+    border-radius: 10px;
+  }
+  .nav-link:hover{
+    background-color: #86cfda;
+    color: white;
+
+  }
+</style>
+<body>
+<img src="logo2.png" alt="" id="logo2"><h1 style="color: white" id="h11">森林动物</h1>
+<a href="../index.html"><img src="../img/home.png" alt="回到主页" id="home">
+</a>
+<p style="color: white;position: absolute;top: 110px;right: 60px;font-size: 20px">回到主页</p>
+<a href="" id="666">
+  <div id="nav">
+    <img src="nav.png" alt="" id="nav-img">
+    <h3 style="color: white;position: absolute;left: 70px;top: 10px;margin: 0;">展馆导航</h3>
+  </div>
+</a>
+<ul class="nav flex-column" style="width: 300px;">
+  <li class="nav-item hover" style="width: 100%;">
+    <a class="nav-link active" href="xuting.html" style="height: 50px;font-size: 24px">序厅</a>
+  </li>
+  <li class="nav-item hover" style="width: 100%;">
+    <a class="nav-link active" href="森林主题通道.html" style="height: 50px;font-size: 24px">森林主题通道</a>
+  </li>
+  <li class="nav-item hover" style="width: 100%;">
+    <a class="nav-link active" href="森林演化与分布.html" style="height: 50px;font-size: 24px">森林演化与分布</a>
+  </li>
+  <li class="nav-item hover" style="width: 100%;">
+    <a class="nav-link active" href="火灾模拟场景.html" style="height: 50px;font-size: 24px">火灾模拟场景</a>
+  </li>
+  <li class="nav-item hover" style="width: 100%;">
+    <a class="nav-link active" href="中国森林的分类与分布.html" style="height: 50px;font-size: 24px">中国森林的分类与分布</a>
+  </li>
+  <li class="nav-item hover" style="width: 100%;">
+    <a class="nav-link active" href="森林动物.html" style="height: 50px;font-size: 24px">森林动物</a>
+  </li>
+</ul>
+<img src="森林动物.png" alt="大图" id="xuting">
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // 点击链接时触发的函数
+    $('#666').click(function(event) {
+      // 阻止默认链接行为，以防止页面跳转
+      event.preventDefault();
+      // 显示/隐藏 div 元素
+      $('.nav').toggle();
+    });
+  });
+</script>
+</html>

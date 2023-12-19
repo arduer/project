@@ -15,13 +15,52 @@
         setInterval("time.innerText=new Date().toLocaleString()",1000)
     </script>
     <style>
-        .div .div1{
-            transform: translate(-100px,0) scale(0);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        .div .div2{
-            transform: translate(100px,0) scale(0);
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            overflow-x: hidden;
         }
-        .div .div1.active{
+
+        section {
+            min-height: 25vh;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        section h2 {
+            font-size: 6vw;
+            font-weight: 500;
+        }
+        #div .div1 {
+            border-radius: 10px;
+            position: relative;
+            /*top: 10vh;*/
+            transition: .5s;
+        }
+        #div .div2 {
+            border-radius: 10px;
+            position: relative;
+            /*top: 10vh;*/
+            transition: .5s;
+        }
+        #div .div1{
+            transform: translate(-300px,0) scale(0);
+        }
+        #div .div2{
+            transform: translate(300px,0) scale(0);
+        }
+        #div .div1.active{
+            transform: translate(0,0) scale(1);
+        }
+        #div .div2.active{
             transform: translate(0,0) scale(1);
         }
     </style>
@@ -43,6 +82,16 @@
     </div>
 </div>
 <div id="NavContent" class="sticky-top"></div>
+<div class="bottom" style="height: 125px; background-color: #00785a;position: absolute;width: 100%;bottom: 0;">
+    <div class="container" style="color: white;text-align: center">
+        <div style="padding-top: 25px;">
+            <div>版权所有 2023 东北林业大学计算机与控制工程学院 软件工程专业</div>
+            <div>联系我们：黑龙江省哈尔滨市和兴路26号东北林业大学</div>
+            <div>邮编：150040</div>
+        </div>
+    </div>
+</div>
+
 <div class="bd-example">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -76,8 +125,9 @@
         </a>
     </div>
 </div>
-
-<br><br>
+<section>
+    <h2>欢迎访问森林博物馆！</h2>
+</section>
 <div class="main" style="display: flex;flex-wrap: wrap;align-items: center;vertical-align: center;">
     <div class="shadow p-3 mb-5 bg-white rounded" style="width:30%;margin-left: 2%;">
         <div class="news" style="position: relative;width: 100%;padding: 20px;">
@@ -267,31 +317,54 @@
         </div>
     </div>
 </div>
+<br><br><br>
 <script>
-    $(document).ready(function (){
-        var min_height=601;
-        $(window).scroll(function (){
-            var s=$(window).scrollTop();
-/*            if(s>min_height){
-                $("#div").fadeIn(500);
-            }else{
-                $("#div").fadeOut(500);
-            }*/
-/*            if(s>min_height){
-                $("#div").slideDown(500);
-            }else{
-                $("#div").slideUp(500);
-            }*/
-            if(s>min_height){
-                $("#div").show(500);
-            }else{
-                $("#div").hide(500);
-            }
+//     $(document).ready(function (){
+//         var min_height=601;
+//         $(window).scroll(function (){
+//             var s=$(window).scrollTop();
+// /*            if(s>min_height){
+//                 $("#div").fadeIn(500);
+//             }else{
+//                 $("#div").fadeOut(500);
+//             }*/
+// /*            if(s>min_height){
+//                 $("#div").slideDown(500);
+//             }else{
+//                 $("#div").slideUp(500);
+//             }*/
+//             if(s>min_height){
+//                 $("#div").show(500);
+//             }else{
+//                 $("#div").hide(500);
+//             }
+//
+//
+//         })
+//     })
+const div1 = document.querySelector('.div1');
 
+const scrollTrigger1 = () => {
+    if (div1.offsetTop/2 <= window.scrollY) {
+        console.log(div1.offsetTop);
+        console.log(window.scrollY);
+        div1.classList.add('active');
+    } else {
+        div1.classList.remove('active');
+    }
+};
+const div2 = document.querySelector('.div2');
 
-        })
-    })
-    window.addEventListener('scroll', scrollTrigger);
+const scrollTrigger2 = () => {
+    if (div2.offsetTop/2 <= window.scrollY) {
+        div2.classList.add('active');
+    } else {
+        div2.classList.remove('active');
+    }
+};
+
+    window.addEventListener('scroll', scrollTrigger1);
+window.addEventListener('scroll', scrollTrigger2);
 
 </script>
 </body>

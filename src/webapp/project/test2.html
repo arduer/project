@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表单提交前执行函数</title>
+  <!-- 引入 jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<form id="myForm" onsubmit="return validateForm()">
+  <!-- 表单内容 -->
+  <input type="text" id="myInput" placeholder="输入内容">
+
+  <!-- 提交按钮 -->
+  <input type="submit" value="提交">
+</form>
+
+<script>
+  function validateForm() {
+    // 运行你的验证逻辑
+
+    var inputValue = $("#myInput").val();
+    if (inputValue.trim() === "") {
+      alert("请填写必要的信息");
+      return false;  // 阻止表单提交
+    }
+
+    // 如果表单验证通过，返回 true 允许表单提交
+    return true;
+  }
+</script>
+
+</body>
+</html>

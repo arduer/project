@@ -117,5 +117,21 @@
     <div class="clear"></div>
 </div>
 <br><br>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // 选择按钮并绑定点击事件
+        $(".btn-success").click(function() {
+            // 要执行的函数
+            myFunction();
+        });
+
+        // 自定义函数
+        function myFunction() {
+            // 在这里编写你想要执行的代码
+            alert("已将回复发送给该用户！");
+        }
+    });
+</script>
 </body>
 </html>

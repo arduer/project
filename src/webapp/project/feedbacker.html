@@ -97,10 +97,10 @@
 <div class="container main" class="shadow-lg p-3 mb-5 bg-white rounded" >
   <div class="table_content1"></div>
   <div>
-    <form>
+    <form  onreset="myFunction2()" id="myForm" onsubmit="return submitTest()">
       <div class="form-group">
-        <label for="exampleFormControlInput1">请留下您的姓名：</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <label for="name">请留下您的姓名：</label>
+        <input type="text" class="form-control" id="name"  name="name" placeholder="">
       </div>
       <div class="form-group">
         <label for="exampleFormControlSelect1">选择反馈或建议类型：</label>
@@ -114,11 +114,11 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="exampleFormControlTextarea1">请描述您的反馈建议</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="context">请描述您的反馈建议</label>
+        <textarea class="form-control" id="context" rows="3" name="context"></textarea>
       </div>
-      <button type="button" class="btn btn-success">提交</button>
-      <button type="reset" class="btn btn-info">重置</button>
+      <input type="submit" id="sub" class="btn btn-success" value="提交">
+      <button type="reset" id="re" class="btn btn-info">重置</button>
     </form>
   </div>
 </div>
@@ -126,8 +126,37 @@
 <br><br>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
-
+  // $(document).ready(function() {
+  //   // 选择按钮并绑定点击事件
+  //   $(".btn-success").click(function() {
+  //     // 要执行的函数
+  //     myFunction();
+  //   });
+  //   $(".btn-info").click(function() {
+  //     // 要执行的函数
+  //     myFunction2();
+  //   });
+  // });
+  function submitTest() {
+    var context = document.getElementById("context").value;
+    var name = document.getElementById("name").value;
+    console.log(name.trim());
+    if (name.trim() === '') {
+      alert("做好事不能不留名呦！");
+      return false;
+    }
+    else if (context.trim() === '') {
+      alert("反馈意见内容不能为空");
+      return false;
+    }else{
+      alert("已收到您的反馈，请您耐心等待回复");
+    }
+  }
+  function myFunction2(){
+    alert("已清空");
+  }
 
 </script>
 </body>

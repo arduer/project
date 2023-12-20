@@ -90,12 +90,12 @@
     <div class="table_content1">
     </div>
     <div class="context">
-        <form onsubmit="return submitTest();" onreset="resetTest()" >
+        <form onsubmit="return submitTest();" onreset="resetTest()" id="myForm">
             <div class="input-group mb-3">
                 <div class="input-group-prepend ">
                     <span class="input-group-text" >姓名：</span>
                 </div>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="name" id="name">
+                <input type="text" class="form-control" placeholder="Username"  name="name" id="name">
                 <div class="input-group-prepend">
                     <span class="input-group-text bitian" style="color: red;" >*必填</span>
                 </div>
@@ -127,7 +127,6 @@
                     <span class="input-group-text bitian" style="color: red;" >*必填</span>
                 </div>
             </div>
-
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">参观群体：</label>
@@ -180,7 +179,6 @@
             </div>
             <button type="submit" id="sub" class="btn btn-success">提交</button>
             <button type="reset" id="re" class="btn btn-info">重置</button>
-
         </form>
 
     </div>
@@ -204,23 +202,25 @@
 
     });
     function submitTest(){
-
-        var tel = document.getElementsByName("tel").value;
-        var idNumber = document.getElementsByName("idNumber").value;
-        var name = document.getElementsByName("name").value;
-        if (idNumber== null) {
-            alert("证件号不能为空");
-        }
-        else if (tel == null) {
-            alert("电话号码不能为空");
-        }
-        else if (name == null) {
+        console.log('adasda')
+        var tel = document.getElementById("tel").value;
+        var idNumber = document.getElementById("idNumber").value;
+        var name = document.getElementById("name").value;
+        if (name ===''){
             alert("姓名不能为空");
+            return false;
+        }else if (idNumber === '') {
+            alert("证件号不能为空");
+            return false;
+        }else if (tel === '') {
+            alert("电话号码不能为空");
+            return false;
+        }else {
+            alert("提交预约成功！")
+            return true;
         }
-       return false;
     }
     function resetTest(){
-        document.getElementsByName("input").value("");
         alert("已清空");
     }
 
